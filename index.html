@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Social Meeting Scheduler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Brand Social Meeting Scheduler</h1>
+
+    <label for="localTime">Enter meeting time (HH:MM AM/PM):</label>
+    <input type="time" id="localTime" />
+
+    <label for="timeZone">Select your time zone:</label>
+    <select id="timeZone">
+      <option value="America/Los_Angeles">Pacific Time</option>
+      <option value="America/New_York">Eastern Time</option>
+      <option value="America/Sao_Paulo">São Paulo</option>
+      <option value="Europe/Paris">Paris</option>
+      <option value="Europe/Berlin">Berlin</option>
+      <option value="Australia/Sydney">Sydney</option>
+      <option value="Europe/London">UK</option>
+    </select>
+
+    <!-- Group Selection Dropdown -->
+    <div class="dropdown">
+      <div class="dropdown-toggle" id="dropdownToggle">Select Groups</div>
+      <div class="dropdown-content" id="dropdownContent">
+        <label><input type="checkbox" class="group-checkbox" value="International"> International</label>
+        <label><input type="checkbox" class="group-checkbox" value="Content"> Content</label>
+        <label><input type="checkbox" class="group-checkbox" value="Community Management"> Community Management</label>
+        <label><input type="checkbox" class="group-checkbox" value="Center of Excellence"> Center of Excellence</label>
+        <label><input type="checkbox" class="group-checkbox" value="Leads"> Leads</label>
+      </div>
+    </div>
+
+    <h3>Select Team Members:</h3>
+    <div id="teamCheckboxes"></div>
+
+    <button id="convertBtn">Check Team Availability</button>
+
+    <h2>Team Availability:</h2>
+    <ul id="results"></ul>
+
+    <h2>Summary:</h2>
+    <p>Good: <span id="goodCount">0</span></p>
+    <p>Okay: <span id="okCount">0</span></p>
+    <p>Bad: <span id="badCount">0</span></p>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
